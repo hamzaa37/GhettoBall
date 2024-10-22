@@ -14,7 +14,14 @@ public class GhettoBall {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Ball b1 = new Ball();
+        Ball b2 = new Ball(2, 4, 10, 5);      
+        Ball b3 = new Ball(b1);
+        
+        System.out.println("test1:" +b1);
+        System.out.println("test2:" +b2);
+        System.out.println("test3:" +b3);
+        
     }
     
 }

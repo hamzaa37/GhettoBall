@@ -15,7 +15,7 @@ public class Ball {
     private float radius;       // Radius of the ball
     private float speed;        // Speed of the ball
 
-    // Constructor
+    // Constructor parametrico
     public Ball(float x, float y, float radius, float speed) {
         this.x = x;
         this.y = y;
@@ -25,7 +25,91 @@ public class Ball {
         this.velocityY = 0;
     }
 
-    // Getters and Setters
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Ball{");
+        sb.append("x=").append(x);
+        sb.append(", y=").append(y);
+        sb.append(", velocityX=").append(velocityX);
+        sb.append(", velocityY=").append(velocityY);
+        sb.append(", radius=").append(radius);
+        sb.append(", speed=").append(speed);
+        sb.append('}');
+        return sb.toString();
+    }
+    // Constructor por defecto
+    public Ball() {
+        this.x = 0;           // Default position (0,0)
+        this.y = 0;
+        this.radius = 10;     // Default radius
+        this.speed = 5;       // Default speed
+        this.velocityX = 0;   // Ball initially stationary
+        this.velocityY = 0;
+    }
+    // Constructor copia
+    public Ball(Ball other) {
+        this.x = other.x;
+        this.y = other.y;
+        this.radius = other.radius;
+        this.speed = other.speed;
+        this.velocityX = other.velocityX;
+        this.velocityY = other.velocityY;
+    }
+
+    // Getters and setters autogenerados con (Control+I)
+    public float getX() {
+        return x;
+    }
+
+    public void setX(float x) {
+        this.x = x;
+    }
+
+    public float getY() {
+        return y;
+    }
+
+    public void setY(float y) {
+        this.y = y;
+    }
+
+    public float getVelocityX() {
+        return velocityX;
+    }
+
+    public void setVelocityX(float velocityX) {
+        this.velocityX = velocityX;
+    }
+
+    public float getVelocityY() {
+        return velocityY;
+    }
+
+    public void setVelocityY(float velocityY) {
+        this.velocityY = velocityY;
+    }
+
+    public float getRadius() {
+        return radius;
+    }
+
+    public void setRadius(float radius) {
+        this.radius = radius;
+    }
+
+    public float getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(float speed) {
+        this.speed = speed;
+    }
+    
+        
+
+
+    /* Getters and Setters
     public float getX() {
         return x;
     }
@@ -65,6 +149,7 @@ public class Ball {
     public void setVelocityY(float velocityY) {
         this.velocityY = velocityY;
     }
+    */
 
     // Method to update the ball's position based on its velocity
     public void updatePosition(float deltaTime) {
@@ -94,5 +179,5 @@ public class Ball {
         checkBoundaryCollision(screenWidth, screenHeight);
     }
 }
-// unfinished_°
+
 
