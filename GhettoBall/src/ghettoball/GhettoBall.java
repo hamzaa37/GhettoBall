@@ -22,6 +22,22 @@ public class GhettoBall {
         System.out.println("test2:" +b2);
         System.out.println("test3:" +b3);
         
+        //Test getters & setters
+        b1.setX(20);
+        b1.setY(37);
+        b1.setVelocityX(1.5f);
+        b1.setVelocityY(2.0f);
+        b1.setRadius(15);
+        b1.setSpeed(10); 
+        
+        System.out.println("X:" +b1.getX());
+        System.out.println("Y:" +b1.getY());
+        System.out.println("VelocityX:" +b1.getVelocityX());
+        System.out.println("VelocityY:" +b1.getVelocityY());
+        System.out.println("Radius:" +b1.getRadius());
+        System.out.println("Speed:" +b1.getSpeed());
+            
+            
     }
     
 }
